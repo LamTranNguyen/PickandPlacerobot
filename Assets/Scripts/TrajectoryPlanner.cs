@@ -27,6 +27,11 @@ public class TrajectoryPlanner : MonoBehaviour
     public GameObject Target { get => m_Target; set => m_Target = value; }
     [SerializeField]
     GameObject m_TargetPlacement;
+    public void SetTargets(GameObject target, GameObject targetPlacement)
+    {
+    	m_Target = target;
+    	m_TargetPlacement = targetPlacement;
+    }
     public GameObject TargetPlacement { get => m_TargetPlacement; set => m_TargetPlacement = value; }
 
     // Assures that the gripper is always positioned above the m_Target cube before grasping.
